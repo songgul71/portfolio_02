@@ -1,6 +1,8 @@
+@charset "utf-8";
+
 /**
 * Template Name: Flexor
-* Template URL: https://bootstrapmade.com/flexor-free-multipurpose-bootstrap-template/
+* Template URL: https://bootstrapmade.com/flexor-fre-multipurpose-bootstrap-template/
 * Updated: Jun 29 2024 with Bootstrap v5.3.3
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
@@ -17,9 +19,9 @@
 
 /* Fonts */
 :root {
-  --default-font: "KoPubWorldDotum",  sans-serif;
-  --heading-font: "KoPubWorldDotum",  sans-serif;
-  --nav-font: "KoPubWorldDotum",  sans-serif;
+  --default-font: "Gothic_A1",  sans-serif;
+  --heading-font: "Gothic_A1",  sans-serif;
+  --nav-font: "Gothic_A1",  sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
@@ -237,7 +239,7 @@ ol, ul {
   transition: all 0.5s;
   z-index: 997;
   background-color: #fff;
-  box-shadow: 1px 1px 5px #9999998c;
+  box-shadow:1px 1px 10px 3px rgb(231 240 255 / 64%);
 }
 
 .header .topbar {
@@ -290,7 +292,7 @@ ol, ul {
 }
 
 .scrolled .header {
-  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 5px 3px rgb(231 240 255 / 64%);
 }
 
 .scrolled .header .topbar {
@@ -632,7 +634,7 @@ ol, ul {
 }
 
 .contact .php-email-form {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  box-shadow:  0px 0px 20px rgb(223 223 223 / 32%);
   padding: 30px;
   margin-top: 30px;
 }
@@ -687,6 +689,7 @@ ol, ul {
 
 .contact .php-email-form button[type=submit]:hover {
   background:var(--accent-color);
+  color: #fff;
 }
 
 @media(max-width:px){
@@ -1312,13 +1315,13 @@ section,
 .testimonials .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background-color:#fff;
-  border: 1px solid #fff;
-  opacity: 0.5;
+  background-color:var(--accent-color);
+  border: 1px solid var(--accent-color);
+  opacity: 0.3;
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--sub-color);
+  background-color: var(--accent-color);
   border: 1px solid var(--aceent-color);
   opacity: 1;
 }
@@ -1354,10 +1357,16 @@ section,
   font-family: var(--heading-font);
 }
 
-.portfolio .portfolio-filters li:hover,
+.portfolio .portfolio-filters li:hover{
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);  
+}
+
 .portfolio .portfolio-filters li.filter-active {
 border: 1px solid var(--accent-color);
-  counter-reset: #fff;
+background-color: var(--accent-color);
+color: #fff;
+/* counter-reset: #fff; */
 }
 
 .portfolio .portfolio-filters li:first-child {
@@ -1459,7 +1468,7 @@ border: 1px solid var(--accent-color);
   display: block;
   width: 2px;
   height: 104px;
-  background: rgba(34, 34, 34, 0.6);
+  background: #cfcfcf;
   position: absolute;
   left: 50%;
   top: -104px;
@@ -1470,7 +1479,7 @@ border: 1px solid var(--accent-color);
   display: block;
   width: 2px;
   height: 170px;
-  background: rgba(34, 34, 34, 0.6);
+  background: #cfcfcf;
   position: absolute;
   left: 50%;
   top: -170px;  
@@ -1478,7 +1487,7 @@ border: 1px solid var(--accent-color);
 }
 .team .team-member {
   background-color: var(--surface-color);
-  box-shadow:3px 5px 5px rgba(2,2,2,0.4);
+  box-shadow: 3px 5px 5px rgb(120 120 120 / 20%);
   overflow: hidden;
   border-radius: 5px;
   position: relative;
@@ -1511,6 +1520,7 @@ border: 1px solid var(--accent-color);
 }
 
 .team .team-member .social a {
+  padding: 0 2%;
   transition: color 0.3s;
   height: 100%;
   display: flex;
@@ -1519,11 +1529,17 @@ border: 1px solid var(--accent-color);
   justify-content: center;
   text-align: center;
   color: var(--heading-color);
-  font-size: 16px;
+  font-size: 18px;
+  word-break: keep-all;
 }
+
+.team .team-member .social a h5{
+  font-size: 23px;
+}
+
 .team .team-member .social span{
   font-size: 14px;
-  color: #666;
+  color: #555;
 }
 
 .team .team-member .social a:hover h5 {
@@ -1731,6 +1747,7 @@ padding: 30px;
 
 .service-details .services-list a:hover {
   border-color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .service-details .service_container {
@@ -1792,7 +1809,7 @@ padding: 30px;
   width: 150px;
   height: 40px;
   font-size: 14px;
-  color: #222;
+  color: var(--accent-color);
   text-align: center;
   padding: 9px 0 10px;
   border: 1px solid var(--accent-color);
