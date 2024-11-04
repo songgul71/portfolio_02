@@ -246,4 +246,54 @@
     },
   });
 
+  //**  Art Concept --개인 작업 추가 Tap menu
+  // $(".concept").eq(0)
+  // $(".concept").eq(1)
+  // $(".concept").eq(2)
+  // $(".concept").eq(3)
+  // $(".concept").eq(4)
+
+  // $(".concept").not(":first").hide();
+
+  // $(".concept_tap li").click(function () {
+  //   let num = $(this).index();
+  //   $(".concept_wrap li").eq(num).show().siblings().hide();
+
+  // });
+
+
+  //** 탭 메뉴
+  // $(".col-lg-8").not(":first").hide();
+
+  // $(".services-list a").click(function () {
+  //   let num = $(this).index();
+  //   $(".col-lg-8").eq(num).show().siblings().hide();
+
+  // });
+
+  // $(".services-list a").click(function () {
+
+  //   $(this).addClass('active').siblings().removeClass('active');
+
+  //   let idx = $(this).index();
+  //   $('.services-list a').eq(idx).show().siblings().hide();
+  // });
+
+
+  // $("document").ready(function () {
+  //   //attr 현재속성
+
+  //   $(".tab_content").hide();
+  //   $(".tab_content").eq(0).show();
+
+
+  //   $("ul.tabs li").click(function () {
+  //     $("ul.tabs li").removeClass("active")
+  //     $(this).addClass("active")
+  //     $(".tab_content").hide();
+  //     var tabid = $(this).attr("rel");
+  //     $("#" + tabid).fadeIn();
+  //   })
+  // });
+
 })();
