@@ -12,7 +12,6 @@
 # Font & Color Variables
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
-
 @media(max-width:768px){
 	#footer .call {pointer-events: initial;}
 }
@@ -38,11 +37,11 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #222;  /* The default color of the main navmenu links */
-  --nav-hover-color: #ff5821; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #0b9bef; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #999; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #ff5821; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-color: #888; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #0b9bef; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -281,7 +280,6 @@ ol, ul {
 
 .header .logo img {
   max-height: 70px;
-  margin-right: 8px;
 }
 
 .header .logo h1 {
@@ -299,6 +297,11 @@ ol, ul {
   height: 0;
   visibility: hidden;
   overflow: hidden;
+}
+
+@media (max-width: 760px) {
+  .header .topbar {height: 0;}
+  .header .logo img {max-height: 50px;}
 }
 
 /*--------------------------------------------------------------
@@ -461,7 +464,7 @@ ol, ul {
     display: none;
     position: absolute;
     inset: 60px 20px 20px 20px;
-    padding: 10px 0;
+    padding: 50px 45px;
     margin: 0;
     border-radius: 6px;
     background-color: var(--nav-mobile-background-color);
@@ -688,7 +691,7 @@ ol, ul {
 }
 
 .contact .php-email-form button[type=submit] {
-  color: #222;
+  color: var(--accent-color);
   background: #fff;
   border: 0;
   padding: 10px 30px;
@@ -867,7 +870,7 @@ ol, ul {
   opacity: 0;
   right: 5%;
   top: 90%;
-  z-index: 99999;
+  z-index: 999;
   background-color: var(--accent-color);
   width: 44px;
   height: 44px;
@@ -1732,10 +1735,17 @@ padding: 30px;
   top: 5%;
   right: 0;
   width: calc(20% - 20px);
-  margin: 0  0 20px 30px;
   background-color: var(--surface-color);
   padding: 10px;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  z-index: 99;
+}
+
+#service-details .container .num-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  display: none;
 }
 
 .service-details .services-list a {
@@ -1858,6 +1868,27 @@ padding: 30px;
   width: 100%;
 }
 
+
+@media(max-width: 980px){
+  .service-details .container {
+    flex-direction: column;
+  }
+  #service-details .container .num-list {
+    display: block;
+  }
+  .service-details div.text-list {
+    display: none;
+  }
+  .service-details .services-list a{
+    width: 100%;
+  }
+}
+
+@media(max-width: 768px){
+  #service-details .container .num-list {
+    display: none;}
+}
+
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
@@ -1882,15 +1913,26 @@ padding: 30px;
   overflow: hidden;
 }
 
+.img-fluid {
+  width: 100%;
+}
+
+.blog-posts .post-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .blog-posts .post-category {
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 500;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
-  margin-bottom: 10px;
+  margin-bottom: 2px;
 }
 
 .blog-posts .title {
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 400;
   padding: 0;
   margin: 0 0 20px 0;
 }
