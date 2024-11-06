@@ -100,14 +100,10 @@ ol, ul {
 }
 
 br.none {display: none;}
-p.guide {word-break: keep-all;}
 
 @media(max-width:1200px){
   br.none {
     display: block;
-  }
-  p.guide{
-    font-size: 14px;
   }
 }
 
@@ -1213,6 +1209,11 @@ section,
   color: #222;
 }
 
+p.guide {
+  word-break: keep-all;
+  font-size: 16px;
+}
+
 .testimonials .testimonial-item h4 {
   color: #555;
   font-size: 14px;
@@ -1285,13 +1286,14 @@ section,
   opacity: 1;
 }
 
-@media (min-width: 992px) {
+@media (max-width: 992px) {
   .testimonials .testimonial-item h3 {
-    font-size: 24px;
-    font-weight: 500;
+    font-size: 28px;
+    font-weight: 600;
   }
   .testimonials .testimonial-item p {
-    width: 80%;
+    width: 100%;
+    font-size: 14px;
   }
 }
 
