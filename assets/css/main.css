@@ -313,21 +313,29 @@ ol, ul {
   justify-content: space-between;
   }
 
-  .left_gnb, .right_gnb {
-    display: flex;
-    gap: 20px;
+  .padding_right {
+    padding-right: 200px ;
   }
 
+.padding_left{
+  padding-left: 200px;
+}
 /* Navmenu - Desktop */
 @media (min-width: 1200px) {
   .navmenu {
     padding: 0;
+  }
+  .navmenu .nav_wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
   }
 
   .navmenu ul {
     margin: 0;
     padding: 0;
     display: flex;
+    gap: 20px;
     list-style: none;
     align-items: center;
   }
@@ -369,79 +377,6 @@ ol, ul {
   .navmenu .active:focus {
     color: var(--accent-color);
   }
-
-  /* .navmenu .dropdown ul {
-    margin: 0;
-    padding: 10px 0;
-    background: #fff;
-    display: block;
-    position: absolute;
-    visibility: hidden;
-    left: 14px;
-    top: 130%;
-    opacity: 0;
-    transition: 0.3s;
-    border-radius: 4px;
-    z-index: 99;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
-  } */
-
-  .navmenu .dropdown ul {
-    margin: 0;
-    padding: 8px 0;
-    background: #fcfcfc;
-    display: block;
-    position: absolute;
-    visibility: hidden;
-    left: -15px;
-    top: 130%;
-    opacity: 0;
-    transition: 0.3s;
-    z-index: 99;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-
-
-  .navmenu .dropdown ul li {
-    min-width: 130px;
-  }
-
-  .navmenu .dropdown ul a {
-    padding: 10px 35px;
-    font-size: 15px;
-    text-transform: none;
-    color: #333;
-  }
-
-  .navmenu .dropdown ul a i {
-    font-size: 12px;
-  }
-
-  .navmenu .dropdown ul a:hover,
-  .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover>a {
-    color: var(--accent-color);
-  }
-
-  .navmenu .dropdown:hover>ul {
-    opacity: 1;
-    top: 100%;
-    visibility: visible;
-  }
-
-  .navmenu .dropdown .dropdown ul {
-    top: 0;
-    left: -90%;
-    visibility: hidden;
-  }
-
-  .navmenu .dropdown .dropdown:hover>ul {
-    opacity: 1;
-    top: 0;
-    left: -100%;
-    visibility: visible;
-  }
 }
 
 /* Navmenu - Mobile */
@@ -462,16 +397,21 @@ ol, ul {
 
   .navmenu ul {
     display: none;
-    position: absolute;
-    inset: 60px 20px 20px 20px;
-    padding: 50px 45px;
     margin: 0;
-    border-radius: 6px;
+    position: absolute;
     background-color: var(--nav-mobile-background-color);
     overflow-y: auto;
     transition: 0.3s;
-    z-index: 9998;
+    background: #fff; 
+    inset: 60px 20px 20px 20px;
+    padding: 50px 45px;
+    border-radius: 6px;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    z-index: 99999;
+  }
+
+  .navmenu ul li {
+    padding: 0;
   }
 
   .navmenu a,
@@ -522,22 +462,6 @@ ol, ul {
     transform: rotate(180deg);
   }
 
-  .navmenu .dropdown ul {
-    position: static;
-    display: none;
-    z-index: 99;
-    padding: 10px 0;
-    margin: 10px 20px;
-    background-color: var(--nav-dropdown-background-color);
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-    box-shadow: none;
-    transition: all 0.5s ease-in-out;
-  }
-
-  .navmenu .dropdown ul ul {
-    background-color: rgba(33, 37, 41, 0.1);
-  }
-
   .navmenu .dropdown>.dropdown-active {
     display: block;
     background-color: rgba(33, 37, 41, 0.03);
@@ -565,10 +489,11 @@ ol, ul {
     transition: 0.3s;
   }
 
-  .mobile-nav-active .navmenu>ul {
+  .mobile-nav-active .navmenu ul {
     display: block;
   }
 }
+
 /*--------------------------------------------------------------
 # map
 --------------------------------------------------------------*/
@@ -1340,6 +1265,10 @@ section,
 }
 
 @media (min-width: 992px) {
+  .testimonials .testimonial-item h3 {
+    font-size: 24px;
+    font-weight: 500;
+  }
   .testimonials .testimonial-item p {
     width: 80%;
   }
@@ -1917,6 +1846,14 @@ padding: 30px;
   width: 100%;
 }
 
+.blog-posts article p {
+  width: 100%;
+  white-space: normal;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 35px;
+}
+
 .blog-posts .post-meta {
   display: flex;
   align-items: center;
@@ -1984,6 +1921,7 @@ padding: 30px;
 }
 
 .blog-pagination li a {
+  font-size: 15px;
   color: var(--accent-color);
   display: flex;
   align-items: center;
@@ -1992,6 +1930,7 @@ padding: 30px;
   height: 36px;
   border-radius: 50%;
   border: 1px solid var(--accent-color);
+  padding-top: 2px;
 }
 
 .blog-pagination li a.active,
@@ -2012,10 +1951,13 @@ padding: 30px;
   padding-bottom: 30px;
 }
 
-.blog-details .article {
+.blog-posts article {
   background-color: var(--surface-color);
-  padding: 30px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .blog-details .post-img {
