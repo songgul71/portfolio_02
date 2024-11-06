@@ -99,6 +99,20 @@ ol, ul {
   list-style: none;
 }
 
+br.none {display: none;}
+p.guide {word-break: keep-all;}
+
+@media(max-width:1200px){
+  br.none {
+    display: block;
+  }
+  p.guide{
+    font-size: 14px;
+  }
+}
+
+
+
 /* PHP Email Form Messages
 ------------------------------*/
 .php-email-form .error-message {
@@ -1176,6 +1190,10 @@ section,
   text-align: center;
 }
 
+.testimonials  .keepall {
+  word-break: keep-all;
+}
+
 .testimonials .testimonial-item img {
   height: 100px;
   object-fit:cover;
@@ -1537,12 +1555,13 @@ padding-bottom: 30px;
   display: flex;
   justify-content: center;
   padding: 20px 0;
+  width: 100%;
 }
 
 .portfolio-details div .concept_tap li a,
 .concept_tap li a.ctive{
   display: block;
-  width: calc(100% / 5 );
+  /* width: calc(100% / 5 ); */
   color: #222;
   font-size: 18px;
   padding: 10px 20px;
@@ -1642,8 +1661,10 @@ padding-bottom: 30px;
 @media(max-width:780px){
   .portfolio-details div .concept_tap li a {
     font-size: 14px;
+    padding: 10px 10px ;
   }
 }
+
 
 /*--------------------------------------------------------------
 # Service Details Section
@@ -1883,6 +1904,7 @@ padding: 30px;
 }
 
 .blog-posts .title {
+  font-size: 14px;
   font-weight: 400;
   padding: 0;
   margin: 0 0 20px 0;
@@ -1992,7 +2014,7 @@ padding: 30px;
 
 .blog-details .title {
   color: var(--heading-color);
-  font-size: 28px;
+  font-size: 18px;
   font-weight: 700;
   padding: 0;
   margin: 30px 0;
